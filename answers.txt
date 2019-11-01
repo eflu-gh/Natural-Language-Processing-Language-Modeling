@@ -1,0 +1,176 @@
+Answer 1: Number of Word types (unique words) in training corpus including the padding symbols and the unknown token 15031
+
+Answer 2: Number of WORD TOKENS in the training corpus: 498474
+
+Answer 3.1: The percentage of word tokens in brown test and not in training data is: 5.9942
+Answer 3.2: The percentage of word types in brown test and not in training data is: 22.7593
+Answer 3.3: The percentage of word tokens in learner test and not in training data is: 5.0491
+Answer 3.4: The percentage of word types in learner test and not in training data is: 16.3482
+
+Answer 4.1: The percentage of bigram tokens in Brown Test and not in training data is: 22.6404
+Answer 4.2: The percentage of bigram types in Brown Test and not in training data is: 38.4977
+Answer 4.3: The percentage of bigram tokens in Learner Test and not in training data is: 24.8443
+Answer 4.4: The percentage of bigram types in Learner Test and not in training data is: 38.6436
+
+Answers 5 and 6:
+Model: UNIGRAM
+Computing sentence: he was laughed off the screen . </s>
+Parameter to compute: P(he), having c(he) = 5957/ c(total_tokens) = 472474, the probability is: 0.012608101186520317 and the LOG probability is: -6.309505171448915
+Parameter to compute: P(was), having c(was) = 5149/ c(total_tokens) = 472474, the probability is: 0.010897954173139686 and the LOG probability is: -6.519798860395024
+Parameter to compute: P(laughed), having c(laughed) = 43/ c(total_tokens) = 472474, the probability is: 9.101029897941474e-05 and the LOG probability is: -13.423610660490384
+Parameter to compute: P(off), having c(off) = 402/ c(total_tokens) = 472474, the probability is: 0.000850840469528482 and the LOG probability is: -10.198823724013552
+Parameter to compute: P(the), having c(the) = 24657/ c(total_tokens) = 472474, the probability is: 0.05218699864966114 and the LOG probability is: -4.260165756924565
+Parameter to compute: P(screen), having c(screen) = 15/ c(total_tokens) = 472474, the probability is: 3.1747778713749326e-05 and the LOG probability is: -14.942984819583963
+Parameter to compute: P(.), having c(.) = 22238/ c(total_tokens) = 472474, the probability is: 0.047067140202423835 and the LOG probability is: -4.409135992178209
+Parameter to compute: P(</s>), having c(</s>) = 26000/ c(total_tokens) = 472474, the probability is: 0.05502948310383217 and the LOG probability is: -4.1836514123893025
+
+Total log probability: -64.2476763974239
+Average of total log probability: -8.030959549677988
+Perplexity: 261.5530076418527
+
+
+Model: BIGRAM
+Computing sentence: <s> he was laughed off the screen . </s>
+Parameter to compute: P(he | <s>), having c(<s>,he) = 2133/ c(<s>= 26000, the probability is: 0.08203846153846153 and the LOG probability is: -3.607555752462608
+Parameter to compute: P(was | he), having c(he,was) = 692/ c(he= 5957, the probability is: 0.11616585529629007 and the LOG probability is: -3.1057420161068423
+Parameter to compute: P(laughed | was), having c(was,laughed) = <UNK>/ c(was) = 5149, the probability is: 0.0 and the LOG probability is: UNDEFINED
+Parameter to compute: P(off | laughed), having c(laughed,off) = <UNK>/ c(laughed) = 43, the probability is: 0.0 and the LOG probability is: UNDEFINED
+Parameter to compute: P(the | off), having c(off,the) = 75/ c(off= 402, the probability is: 0.1865671641791045 and the LOG probability is: -2.4222330006830477
+Parameter to compute: P(screen | the), having c(the,screen) = 3/ c(the= 24657, the probability is: 0.00012166930283489475 and the LOG probability is: -13.004747157546761
+Parameter to compute: P(. | screen), having c(screen,.) = <UNK>/ c(screen) = 15, the probability is: 0.0 and the LOG probability is: UNDEFINED
+Parameter to compute: P(</s> | .), having c(.,</s>) = 22238/ c(.= 22238, the probability is: 1.0 and the LOG probability is: 0.0
+
+Calculations cannot be done due : 
+See parameter P(laughed | was) the log probability is UNDEFINED
+See parameter P(off | laughed) the log probability is UNDEFINED
+See parameter P(. | screen) the log probability is UNDEFINED
+
+
+
+Model: BIGRAM ADD 1 SMOOTHING
+Computing sentence: <s> he was laughed off the screen . </s>
+Parameter to compute: P(he | <s>), having c(<s>,he) = 2133/ c(<s>= 26000, the probability is: 0.05200945626477541 and the LOG probability is: -4.2650822344826524
+Parameter to compute: P(was | he), having c(he,was) = 692/ c(he= 5957, the probability is: 0.0330188679245283 and the LOG probability is: -4.920565532505595
+Parameter to compute: P(laughed | was), having c(was,laughed) = <UNK>/ c(was) = 5149, the probability is: 4.955401387512388e-05 and the LOG probability is: -14.30063855399372
+Parameter to compute: P(off | laughed), having c(laughed,off) = <UNK>/ c(laughed) = 43, the probability is: 6.633939233116624e-05 and the LOG probability is: -13.879774677336927
+Parameter to compute: P(the | off), having c(off,the) = 75/ c(off= 402, the probability is: 0.004924512408475345 and the LOG probability is: -7.665803398813611
+Parameter to compute: P(screen | the), having c(the,screen) = 3/ c(the= 24657, the probability is: 0.00010078613182826043 and the LOG probability is: -13.276415241892678
+Parameter to compute: P(. | screen), having c(screen,.) = <UNK>/ c(screen) = 15, the probability is: 6.646284726837697e-05 and the LOG probability is: -13.877092375027413
+Parameter to compute: P(</s> | .), having c(.,</s>) = 22238/ c(.= 22238, the probability is: 0.5967157691378894 and the LOG probability is: -0.7448841920410941
+
+Total log probability: -72.93025620609369
+Average of total log probability: -9.116282025761711
+Perplexity: 554.9761741392098
+
+
+Model: UNIGRAM
+Computing sentence: there was no <unk> behind them . </s>
+Parameter to compute: P(there), having c(there) = 1243/ c(total_tokens) = 472474, the probability is: 0.002630832596079361 and the LOG probability is: -8.570264834139996
+Parameter to compute: P(was), having c(was) = 5149/ c(total_tokens) = 472474, the probability is: 0.010897954173139686 and the LOG probability is: -6.519798860395024
+Parameter to compute: P(no), having c(no) = 998/ c(total_tokens) = 472474, the probability is: 0.002112285543754789 and the LOG probability is: -8.88697940985522
+Parameter to compute: P(<unk>), having c(<unk>) = 13219/ c(total_tokens) = 472474, the probability is: 0.027978259121136825 and the LOG probability is: -5.159549992655863
+Parameter to compute: P(behind), having c(behind) = 166/ c(total_tokens) = 472474, the probability is: 0.0003513420844321592 and the LOG probability is: -11.474835983845557
+Parameter to compute: P(them), having c(them) = 812/ c(total_tokens) = 472474, the probability is: 0.0017186130877042969 and the LOG probability is: -9.184539498007306
+Parameter to compute: P(.), having c(.) = 22238/ c(total_tokens) = 472474, the probability is: 0.047067140202423835 and the LOG probability is: -4.409135992178209
+Parameter to compute: P(</s>), having c(</s>) = 26000/ c(total_tokens) = 472474, the probability is: 0.05502948310383217 and the LOG probability is: -4.1836514123893025
+
+Total log probability: -58.388755983466474
+Average of total log probability: -7.298594497933309
+Perplexity: 157.43303579387805
+
+
+Model: BIGRAM
+Computing sentence: <s> there was no <unk> behind them . </s>
+Parameter to compute: P(there | <s>), having c(<s>,there) = 379/ c(<s>= 26000, the probability is: 0.014576923076923078 and the LOG probability is: -6.100169964632087
+Parameter to compute: P(was | there), having c(there,was) = 381/ c(there= 1243, the probability is: 0.3065164923572003 and the LOG probability is: -1.7059633935591632
+Parameter to compute: P(no | was), having c(was,no) = 120/ c(was= 5149, the probability is: 0.023305496212856866 and the LOG probability is: -5.423185959188938
+Parameter to compute: P(<unk> | no), having c(no,<unk>) = 27/ c(no= 998, the probability is: 0.027054108216432865 and the LOG probability is: -5.208008503173792
+Parameter to compute: P(behind | <unk>), having c(<unk>,behind) = 5/ c(<unk>= 13219, the probability is: 0.0003782434374763598 and the LOG probability is: -11.368397327649257
+Parameter to compute: P(them | behind), having c(behind,them) = 10/ c(behind= 166, the probability is: 0.060240963855421686 and the LOG probability is: -4.053111336459563
+Parameter to compute: P(. | them), having c(them,.) = 137/ c(them= 812, the probability is: 0.1687192118226601 and the LOG probability is: -2.5673038342246497
+Parameter to compute: P(</s> | .), having c(.,</s>) = 22238/ c(.= 22238, the probability is: 1.0 and the LOG probability is: 0.0
+
+Total log probability: -36.426140318887455
+Average of total log probability: -4.553267539860932
+Perplexity: 23.478487059293837
+
+
+Model: BIGRAM ADD 1 SMOOTHING
+Computing sentence: <s> there was no <unk> behind them . </s>
+Parameter to compute: P(there | <s>), having c(<s>,there) = 379/ c(<s>= 26000, the probability is: 0.009261290243961882 and the LOG probability is: -6.75457108697613
+Parameter to compute: P(was | there), having c(there,was) = 381/ c(there= 1243, the probability is: 0.023473024456187784 and the LOG probability is: -5.412852447324573
+Parameter to compute: P(no | was), having c(was,no) = 120/ c(was= 5149, the probability is: 0.0059960356788899905 and the LOG probability is: -7.381775316719125
+Parameter to compute: P(<unk> | no), having c(no,<unk>) = 27/ c(no= 998, the probability is: 0.0017468338636221848 and the LOG probability is: -9.161041880486327
+Parameter to compute: P(behind | <unk>), having c(<unk>,behind) = 5/ c(<unk>= 13219, the probability is: 0.00021238938053097346 and the LOG probability is: -12.201000746356119
+Parameter to compute: P(them | behind), having c(behind,them) = 10/ c(behind= 166, the probability is: 0.0007238270711324604 and the LOG probability is: -10.432067314035452
+Parameter to compute: P(. | them), having c(them,.) = 137/ c(them= 812, the probability is: 0.008710471501609543 and the LOG probability is: -6.843033470014426
+Parameter to compute: P(</s> | .), having c(.,</s>) = 22238/ c(.= 22238, the probability is: 0.5967157691378894 and the LOG probability is: -0.7448841920410941
+
+Total log probability: -58.93122645395324
+Average of total log probability: -7.366403306744155
+Perplexity: 165.00927475169712
+
+
+Model: UNIGRAM
+Computing sentence: i look forward to hearing your reply . </s>
+Parameter to compute: P(i), having c(i) = 3235/ c(total_tokens) = 472474, the probability is: 0.006846937609265272 and the LOG probability is: -7.190325418312612
+Parameter to compute: P(look), having c(look) = 231/ c(total_tokens) = 472474, the probability is: 0.0004889157921917396 and the LOG probability is: -10.998126373776424
+Parameter to compute: P(forward), having c(forward) = 47/ c(total_tokens) = 472474, the probability is: 9.947637330308123e-05 and the LOG probability is: -13.295286563514845
+Parameter to compute: P(to), having c(to) = 9789/ c(total_tokens) = 472474, the probability is: 0.02071860038859281 and the LOG probability is: -5.592929642379461
+Parameter to compute: P(hearing), having c(hearing) = 30/ c(total_tokens) = 472474, the probability is: 6.349555742749865e-05 and the LOG probability is: -13.942984819583963
+Parameter to compute: P(your), having c(your) = 367/ c(total_tokens) = 472474, the probability is: 0.0007767623191964002 and the LOG probability is: -10.330239162349269
+Parameter to compute: P(reply), having c(reply) = 29/ c(total_tokens) = 472474, the probability is: 6.137903884658203e-05 and the LOG probability is: -13.99189442006491
+Parameter to compute: P(.), having c(.) = 22238/ c(total_tokens) = 472474, the probability is: 0.047067140202423835 and the LOG probability is: -4.409135992178209
+Parameter to compute: P(</s>), having c(</s>) = 26000/ c(total_tokens) = 472474, the probability is: 0.05502948310383217 and the LOG probability is: -4.1836514123893025
+
+Total log probability: -83.93457380454899
+Average of total log probability: -9.326063756060998
+Perplexity: 641.8372701258673
+
+
+Model: BIGRAM
+Computing sentence: <s> i look forward to hearing your reply . </s>
+Parameter to compute: P(i | <s>), having c(<s>,i) = 916/ c(<s>= 26000, the probability is: 0.03523076923076923 and the LOG probability is: -4.827020214706235
+Parameter to compute: P(look | i), having c(i,look) = 1/ c(i= 3235, the probability is: 0.0003091190108191654 and the LOG probability is: -11.65954999687987
+Parameter to compute: P(forward | look), having c(look,forward) = 4/ c(look= 231, the probability is: 0.017316017316017316 and the LOG probability is: -5.851749041416058
+Parameter to compute: P(to | forward), having c(forward,to) = 13/ c(forward= 47, the probability is: 0.2765957446808511 and the LOG probability is: -1.8541491335365452
+Parameter to compute: P(hearing | to), having c(to,hearing) = <UNK>/ c(to) = 9789, the probability is: 0.0 and the LOG probability is: UNDEFINED
+Parameter to compute: P(your | hearing), having c(hearing,your) = <UNK>/ c(hearing) = 30, the probability is: 0.0 and the LOG probability is: UNDEFINED
+Parameter to compute: P(reply | your), having c(your,reply) = 1/ c(your= 367, the probability is: 0.0027247956403269754 and the LOG probability is: -8.519636252843213
+Parameter to compute: P(. | reply), having c(reply,.) = 6/ c(reply= 29, the probability is: 0.20689655172413793 and the LOG probability is: -2.273018494406416
+Parameter to compute: P(</s> | .), having c(.,</s>) = 22238/ c(.= 22238, the probability is: 1.0 and the LOG probability is: 0.0
+
+Calculations cannot be done due : 
+See parameter P(hearing | to) the log probability is UNDEFINED
+See parameter P(your | hearing) the log probability is UNDEFINED
+
+
+
+Model: BIGRAM ADD 1 SMOOTHING
+Computing sentence: <s> i look forward to hearing your reply . </s>
+Parameter to compute: P(i | <s>), having c(<s>,i) = 916/ c(<s>= 26000, the probability is: 0.022348955667665912 and the LOG probability is: -5.483648771712023
+Parameter to compute: P(look | i), having c(i,look) = 1/ c(i= 3235, the probability is: 0.00010949304719150334 and the LOG probability is: -13.156873117949567
+Parameter to compute: P(forward | look), having c(look,forward) = 4/ c(look= 231, the probability is: 0.0003276110601493906 and the LOG probability is: -11.575728316363783
+Parameter to compute: P(to | forward), having c(forward,to) = 13/ c(forward= 47, the probability is: 0.0009285051067780873 and the LOG probability is: -10.072802534544207
+Parameter to compute: P(hearing | to), having c(to,hearing) = <UNK>/ c(to) = 9789, the probability is: 4.0290088638195005e-05 and the LOG probability is: -14.599215495017718
+Parameter to compute: P(your | hearing), having c(hearing,your) = <UNK>/ c(hearing) = 30, the probability is: 6.639665360865813e-05 and the LOG probability is: -13.878529942862396
+Parameter to compute: P(reply | your), having c(your,reply) = 1/ c(your= 367, the probability is: 0.000129886998311469 and the LOG probability is: -12.910455355309821
+Parameter to compute: P(. | reply), having c(reply,.) = 6/ c(reply= 29, the probability is: 0.0004648074369189907 and the LOG probability is: -11.071079227501686
+Parameter to compute: P(</s> | .), having c(.,</s>) = 22238/ c(.= 22238, the probability is: 0.5967157691378894 and the LOG probability is: -0.7448841920410941
+
+Total log probability: -93.4932169533023
+Average of total log probability: -10.388135217033588
+Perplexity: 1340.1095414603672
+
+
+Answers 7
+Test Corpora: BROWN-TEST
+Perplexity under UNIGRAM model: 397.0109087010659
+Perplexity under BIGRAM model: THERE IS NOT POSSIBLE TO GET A PERPLEXITY DUE THERE ARE SOME BIGRAMS NOT FOUND IN TRAINING DATA
+Perplexity under BIGRAM 1-ADD SMOOTHING model: 13420.80561945256
+
+
+Test Corpora: LEARNER-TEST
+Perplexity under UNIGRAM model: 463.2588557300085
+Perplexity under BIGRAM model: THERE IS NOT POSSIBLE TO GET A PERPLEXITY DUE THERE ARE SOME BIGRAMS NOT FOUND IN TRAINING DATA
+Perplexity under BIGRAM 1-ADD SMOOTHING model: 11786.64457213999
